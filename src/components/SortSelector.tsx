@@ -19,7 +19,6 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   const currnetSortOrder = sortOrders.find(
     (order) => order.value === sortOrder
   );
-  console.log(currnetSortOrder);
 
   return (
     <Menu>
