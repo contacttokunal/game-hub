@@ -13,18 +13,18 @@ const axiosInstance = axios.create({
   },
 });
 
-class ApiClinet<T> {
+class APIClient<T> {
   endpoint: string;
 
   constructor(endpoint: string) {
     this.endpoint = endpoint;
   }
 
-  getAll(config: AxiosRequestConfig) {
+  getAll = (config: AxiosRequestConfig) => {
     return axiosInstance
       .get<FetchResponse<T>>(this.endpoint, config)
       .then((res) => res.data);
-  }
+  };
 }
 
-export default ApiClinet;
+export default APIClient;
